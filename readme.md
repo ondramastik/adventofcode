@@ -1,0 +1,1 @@
+Run with ts-node .\src\day1\solution.ts
