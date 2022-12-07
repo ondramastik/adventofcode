@@ -47,15 +47,12 @@ function solvePart1(fileSystem: Directory): number {
 function solvePart2(fileSystem: Directory): number {
     let minSizeDiff = Number.MAX_VALUE;
     const freeSpace = FILESYSTEM_MAX_SIZE - calculateDirectorySize(fileSystem)
-    console.log(`free space ${freeSpace}`)
     const spaceNeeded = REQUIRED_FS_SPACE - freeSpace
-    console.log(`space needed ${spaceNeeded}`)
 
     const directoryAction = (directory: Directory, totalSize: number) => {
         const sizeDiff = totalSize - spaceNeeded
 
         if (sizeDiff >= 0 && sizeDiff < minSizeDiff) {
-            console.log(totalSize)
             minSizeDiff = sizeDiff;
         }
     }
