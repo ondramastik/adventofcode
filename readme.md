@@ -1,1 +1,1 @@
-Run with ts-node .\src\day1\solution.ts
+Run with ts-node .\src\day{x}\solution.ts
