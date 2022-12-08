@@ -18,11 +18,8 @@ function solvePart1(rucksacks: string[]): number {
         throw "No common item found, invalid data"
     }
 
-    return rucksacks.map((rucksack) => findSharedItem(rucksack))
-        .map((sharedItem) => getItemPriority(sharedItem))
-        .reduce((accumulator, value) => {
-            return accumulator + value;
-        }, 0);
+    return sumArray(rucksacks.map((rucksack) => findSharedItem(rucksack))
+        .map((sharedItem) => getItemPriority(sharedItem)));
 }
 
 /**
