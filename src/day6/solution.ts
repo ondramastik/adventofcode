@@ -8,7 +8,7 @@ function solvePart1(signal: string): number {
 }
 
 /**
- * After the rearrangement procedure completes, what crate ends up on top of each stack?
+ * How many characters need to be processed before the first start-of-message marker is detected?
  */
 function solvePart2(signal: string): number {
     return findMarker(14, signal)
