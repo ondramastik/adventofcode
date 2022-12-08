@@ -8,3 +8,9 @@ export function loadTestData(fileName: string): Promise<string> {
         });
     })
 }
+
+export function sumArray(numbers: number[]): number {
+    return numbers.reduce((accumulator, value) => {
+        return accumulator + value;
+    }, 0);
+}

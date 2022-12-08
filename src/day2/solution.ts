@@ -1,4 +1,4 @@
-import {loadTestData} from "../utils";
+import {loadTestData, sumArray} from "../utils";
 
 /**
  * What would your total score be if everything goes exactly according to your strategy guide?
@@ -21,10 +21,7 @@ function solvePart1(options: [OpponentOption, PlayerOption][]): number {
         }
     }
 
-    return options.map(([option1, option2]) => evaluateRound(option1, option2))
-        .reduce((accumulator, value) => {
-            return accumulator + value;
-        }, 0);
+    return sumArray(options.map(([option1, option2]) => evaluateRound(option1, option2)));
 }
 
 /**

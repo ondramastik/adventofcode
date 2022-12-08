@@ -1,4 +1,4 @@
-import {loadTestData} from "../utils";
+import {loadTestData, sumArray} from "../utils";
 
 /**
  * Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
@@ -30,12 +30,6 @@ function parseTestData(rawData: string): number[][] {
     return elves.map(counts => counts.map((count) => {
         return Number(count);
     }));
-}
-
-function sumArray(numbers: number[]): number {
-    return numbers.reduce((accumulator, value) => {
-        return accumulator + value;
-    }, 0);
 }
 
 loadTestData("src/day1/input")
