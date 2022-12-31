@@ -22,18 +22,12 @@ interface Motion {
     distance: number
 }
 
-/**
- * Simulate your complete hypothetical series of motions. How many positions does the tail of the rope visit at least once?
- */
 function solvePart1(motions: Motion[]): number {
     const rope = simulateRope(motions, 2)
 
     return rope.previousCell!.visits.size
 }
 
-/**
- * Consider each tree on your map. What is the highest scenic score possible for any tree?
- */
 function solvePart2(motions: Motion[]): number {
     let currentRope = simulateRope(motions, 10)
 
